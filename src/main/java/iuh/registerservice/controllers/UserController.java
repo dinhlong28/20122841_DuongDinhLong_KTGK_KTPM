@@ -21,7 +21,7 @@ public class UserController {
     User getUserById(@PathVariable long id){
         return userService.getUserById(id);
     }
-    @PostMapping("/users")
+    @PostMapping("/addusers")
     void postListUser(){
         User user = new User(11, "User11", "11", "11");
         userService.addUser(user);
