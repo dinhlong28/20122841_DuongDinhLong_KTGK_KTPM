@@ -10,21 +10,8 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class RegisterServiceApplication {
-    @Autowired
-    private UserRepository userRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(RegisterServiceApplication.class, args);
-    }
-    @Bean
-    CommandLineRunner commandLineRunner(){
-        return new CommandLineRunner() {
-            @Override
-            public void run(String... args) throws Exception {
-                for (int i=1; i<=10; i++){
-                    userRepository.save(new User(i, "User" + i, i +"", i+""));
-                }
-            }
-        };
     }
 }

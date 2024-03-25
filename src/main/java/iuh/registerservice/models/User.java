@@ -24,4 +24,7 @@ public class User implements Serializable {
     private String password;
     @Column(name = "email")
     private String Email;
+
+    public User(String user11, String number, String number1) {
+    }
 }

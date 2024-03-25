@@ -21,10 +21,12 @@ public class UserController {
     User getUserById(@PathVariable long id){
         return userService.getUserById(id);
     }
-    @PostMapping("/addusers")
-    void postListUser(){
-        User user = new User(11, "User11", "11", "11");
+    @PostMapping("/adduser")
+    User postUser(){
+        User user = new User( 1,"User11", "11", "11");
+        System.out.println(user.getName());
         userService.addUser(user);
+        return user;
     }
 }
 
